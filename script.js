@@ -12,11 +12,11 @@
 i dati da definire:
 - il prezzo del biglietto 
 - lo sconto che bisogna applicare in base all'età
+- prezzo totale del viaggio
 
 raccolta dati:
 - età passeggero
-- quanti km sono stati fatti
-
+- quanti km l'utente vuole percorrere
 dati noti:
 - prezzo per km: 0.21€
 - la percentuale di sconto applicata alla fascia d'età:
@@ -28,6 +28,12 @@ const priceKm = 0.21;
 const youngDiscount = 20;
 const seniorDiscount = 40;
 
+console.log(priceKm);
+console.log(youngDiscount);
+console.log(seniorDiscount);
+
+const km = parseFloat(prompt("Inserisci il numero di chilometri da percorrere:"));
+const age = parseInt(prompt("Inserisci l'età del passeggero:"));
 
 
 

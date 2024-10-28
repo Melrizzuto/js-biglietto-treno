@@ -24,6 +24,10 @@ dati noti:
    - Senior (<65 anni): 40%
 */
 
+const priceKm = 0.21;
+const youngDiscount = 20;
+const seniorDiscount = 40;
+
 
 
 

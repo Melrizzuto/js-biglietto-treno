@@ -43,17 +43,20 @@ const age = parseInt(prompt("Inserisci l'età del passeggero:"));
 
 let totalPrice = priceKm * km;
 let result;
+let discountApplied = ""; 
 
-console.log(totalPrice);
+// Condizioni per applicare gli sconti
 
-if(age > 18){
-    result = totalPrice - (totalPrice * 0.20);
-} 
-
-else if (age < 65){
-    result = totalPrice - (totalPrice * 0.40);
-}
-else {
+if (age < 18) {
+    result = totalPrice - (totalPrice * youngDiscount / 100); 
+    discountApplied = "young (20%)";
+} else if (age > 65) {
+    result = totalPrice - (totalPrice * seniorDiscount / 100);
+    discountApplied = "senior (40%)";
+} else {
     result = totalPrice;
+    discountApplied = "nessuno sconto applicato";
 }
+
+
 

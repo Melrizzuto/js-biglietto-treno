@@ -5,3 +5,25 @@
  - va applicato uno sconto del 40% per gli over 65.
  - L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
  Questo richiederà un minimo di ricerca. */
+
+/*  obiettivo esercizio:
+- Il prezzo finale con max 2 decimali.
+
+i dati da definire:
+- il prezzo del biglietto 
+- lo sconto che bisogna applicare in base all'età
+
+raccolta dati:
+- età passeggero
+- quanti km sono stati fatti
+
+dati noti:
+- prezzo per km: 0.21€
+- la percentuale di sconto applicata alla fascia d'età:
+   - Young (>18 anni): 20%
+   - Senior (<65 anni): 40%
+*/
+
+
+
+

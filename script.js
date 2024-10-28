@@ -1,3 +1,5 @@
+
+
 /* Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
  Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
  - il prezzo del biglietto è definito in base ai km (0.21 € al km)
@@ -24,6 +26,9 @@ dati noti:
    - Senior (<65 anni): 40%
 */
 
+"use strict"
+console.clear();
+
 const priceKm = 0.21;
 const youngDiscount = 20;
 const seniorDiscount = 40;
@@ -36,4 +41,19 @@ const km = parseFloat(prompt("Inserisci il numero di chilometri da percorrere:")
 const age = parseInt(prompt("Inserisci l'età del passeggero:"));
 
 
+let totalPrice = priceKm * km;
+let result;
+
+console.log(totalPrice);
+
+if(age > 18){
+    result = totalPrice - (totalPrice * 0.20);
+} 
+
+else if (age < 65){
+    result = totalPrice - (totalPrice * 0.40);
+}
+else {
+    result = totalPrice;
+}
 

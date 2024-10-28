@@ -41,11 +41,6 @@ console.log(seniorDiscount);
 const km = parseFloat(prompt("Inserisci il numero di chilometri da percorrere:"));
 const age = parseInt(prompt("Inserisci l'età del passeggero:"));
 
-if (km === null || isNaN(parseFloat(km)) || parseFloat(km) <= 0){
-    console.log("Input non valido. Per favore, inserisci un numero di chilometri maggiore di 0.");
-}
-
-
 let totalPrice = priceKm * km;
 let result;
 let discountApplied = ""; 

@@ -14,14 +14,15 @@
 i dati da definire:
 - il prezzo del biglietto 
 - lo sconto che bisogna applicare in base all'età
-- prezzo totale del viaggio
+- prezzo totale del viaggio senza sconto
 
 raccolta dati:
 - età passeggero
 - quanti km l'utente vuole percorrere
+
 dati noti:
 - prezzo per km: 0.21€
-- la percentuale di sconto applicata alla fascia d'età:
+- la percentuale di sconto applicata in base la fascia d'età:
    - Young (>18 anni): 20%
    - Senior (<65 anni): 40%
 */
@@ -45,18 +46,21 @@ let totalPrice = priceKm * km;
 let result;
 let discountApplied = ""; 
 
+console.log(totalPrice);
+
 // Condizioni per applicare gli sconti
 
 if (age < 18) {
     result = totalPrice - (totalPrice * youngDiscount / 100); 
     discountApplied = "young (20%)";
+    console.log("Lo sconto utilizzato è quello " + discountApplied + ", il prezzo totale è: €" + result.toFixed(2));
 } else if (age > 65) {
     result = totalPrice - (totalPrice * seniorDiscount / 100);
     discountApplied = "senior (40%)";
+    console.log("Lo sconto utilizzato è quello " + discountApplied + ", il prezzo totale è: €" + result.toFixed(2));
 } else {
     result = totalPrice;
     discountApplied = "nessuno sconto applicato";
+    console.log("Non è previsto nessuno sconto. Il prezzo totale è: €" + totalPrice.toFixed(2));
 }
-
-
 

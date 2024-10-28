@@ -50,11 +50,11 @@ console.log(totalPrice);
 
 // Condizioni per applicare gli sconti
 
-if (age < 18) {
+if (age <= 18) {
     result = totalPrice - (totalPrice * youngDiscount / 100); 
     discountApplied = "young (20%)";
     console.log("Lo sconto utilizzato è quello " + discountApplied + ", il prezzo totale è: €" + result.toFixed(2));
-} else if (age > 65) {
+} else if (age >= 65) {
     result = totalPrice - (totalPrice * seniorDiscount / 100);
     discountApplied = "senior (40%)";
     console.log("Lo sconto utilizzato è quello " + discountApplied + ", il prezzo totale è: €" + result.toFixed(2));
